@@ -23,11 +23,11 @@ modules:
         - atim/starship
     install:
       packages:
-        - micro
         - starship
         - neovim
         - fedora-logos
         - plasma-workspace-wallpapers
+        - gnome-disk-utility
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
