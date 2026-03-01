@@ -3,7 +3,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: arctix
 # description will be included in the image's metadata
-description: Arctix, custome Ublue image
+description: Arctix, custom Ublue image
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/bazzite
@@ -28,6 +28,9 @@ modules:
         - fedora-logos
         - plasma-workspace-wallpapers
         - gnome-disk-utility
+        - emacs
+      
+    
     remove:
       packages:
         # example: removing firefox (in favor of the flatpak)
@@ -35,7 +38,9 @@ modules:
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
         - bazzite-kde-config
-        -  bazzite-wallpapers
+        - bazzite-wallpapers
+        - plymouth-theme-spinner
+        
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
@@ -44,6 +49,7 @@ modules:
         install: # system flatpaks we want all users to have and not remove
           - org.mozilla.firefox
           - org.gnome.Loupe
+          - flatseal
       - scope: user # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
