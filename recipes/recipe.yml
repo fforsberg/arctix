@@ -41,12 +41,7 @@ modules:
         - bazzite-wallpapers
         - plymouth-theme-spinner
         
-     - type: os-release
-    properties:
-      NAME: Arctix
-      PRETTY_NAME: Arctix GNU/Linux
-      ID: arctix
-      ID_LIKE: "Fedora"
+
       
   - type: default-flatpaks
     configurations:
