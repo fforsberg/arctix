@@ -41,6 +41,13 @@ modules:
         - bazzite-wallpapers
         - plymouth-theme-spinner
         
+     - type: os-release
+    properties:
+      NAME: Arctix
+      PRETTY_NAME: Arctix OS
+      ID: arctix
+      ID_LIKE: "Fedora"
+      
   - type: default-flatpaks
     configurations:
       - notify: true # Send notification after install/uninstall is finished (true/false)
