@@ -29,6 +29,9 @@ modules:
         - plasma-workspace-wallpapers
         - gnome-disk-utility
         - emacs
+        - plymouth-theme-spinner
+        - fedora-logos
+        - plymouth-system-theme
       
     
     remove:
@@ -39,6 +42,7 @@ modules:
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
         - bazzite-kde-config
         - bazzite-wallpapers
+        - bazzite-plymouth-theme
         
 
       
